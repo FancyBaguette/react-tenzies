@@ -1,6 +1,5 @@
-# react-tenzies
+# 🎲 react-tenzies
 A game of Tenzies built with React. The project has been created while following a tutorial on Scrimba.com
-Tenzies is a game in which you have to roll 10 dice with the same value in order to win.
 
 That being said, i've decided to add some additional features to the app as the course itself suggested and refactor some of its code to match modern React's standards, as the project was originally written on React version 17.
 
