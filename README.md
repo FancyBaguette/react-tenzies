@@ -3,10 +3,10 @@ A game of Tenzies built with React. The project has been created while following
 
 That being said, i've decided to add some additional features to the app as the course itself suggested and refactor some of its code to match modern React's standards, as the project was originally written on React version 17.
 
-**The additional features**
+**The additional features** <br>
 *If the the box isn't checked, the feature hasn't been implemented yet*
 
-- [ ] Actual dots on the dice
+- [x] Actual dots on the dice
 - [ ] Track the number of rolls
 - [ ] Track the time it took to win
 - [ ] Saving best time to local storage

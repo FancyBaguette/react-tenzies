@@ -1,11 +1,11 @@
 const Die = (props) => {
     return (
         <div 
-            className={`die-face${props.isHeld ? " is-held" : ""}`} 
+            className={`die-face ${props.isHeld ? "is-held" : ""}`}
+            data-number={props.value}
+            title={props.value}
             onClick={props.holdDice}
-        >
-            <p className="die-num">{props.value}</p>
-        </div>
+        />
     )
 }
 

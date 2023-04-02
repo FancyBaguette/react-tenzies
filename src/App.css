@@ -57,6 +57,8 @@ main {
 }
 
 .die-face {
+  background-position: center;
+  background-size: cover;
   width: 50px;
   max-height: 50px;
   aspect-ratio: 1/1;
@@ -68,12 +70,36 @@ main {
   cursor: pointer;
 }
 
+.die-face[data-number="1"] {
+  background-image: url('./assets/images/dice-1.png');
+}
+
+.die-face[data-number="2"] {
+  background-image: url('./assets/images/dice-2.png');
+}
+
+.die-face[data-number="3"] {
+  background-image: url('./assets/images/dice-3.png');
+}
+
+.die-face[data-number="4"] {
+  background-image: url('./assets/images/dice-4.png');
+}
+
+.die-face[data-number="5"] {
+  background-image: url('./assets/images/dice-5.png');
+}
+
+.die-face[data-number="6"] {
+  background-image: url('./assets/images/dice-6.png');
+}
+
 .die-num {
   font-size: 2rem;
 }
 
 .is-held {
-  background-color: #59E391;
+  box-shadow: 0px 0px 10px #39925d;
 }
 
 .roll-dice {

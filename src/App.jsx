@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react"
-import Die from "./Die"
 import {nanoid} from "nanoid"
+import Die from "./Die"
 import Confetti from "react-confetti"
 import "./App.css"
 
@@ -19,9 +19,11 @@ const App = () => {
     const [tenzies, setTenzies] = useState(false)
     
     useEffect(() => {
+      console.log('Dice useEffect invoked')
       if (dice.every(die => dice[0].value === die.value && die.isHeld)) {
         setTenzies(prevTenzies => true)
         alert('You won!')
+        console.log('You won')
       }
     }, [dice])
 
