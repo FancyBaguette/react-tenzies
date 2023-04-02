@@ -16,10 +16,10 @@ const App = () => {
     }
 
     const [dice, setDice] = useState(allNewDice())
+    const [timesRolled, setTimesRolled] = useState(0)
     const [tenzies, setTenzies] = useState(false)
     
     useEffect(() => {
-      console.log('Dice useEffect invoked')
       if (dice.every(die => dice[0].value === die.value && die.isHeld)) {
         setTenzies(prevTenzies => true)
         alert('You won!')
@@ -41,6 +41,7 @@ const App = () => {
                 die :
                 generateNewDie()
         }))
+        setTimesRolled(prevTimesRolled => prevTimesRolled + 1)
     }
     
     const holdDice = (id) => {
@@ -51,16 +52,6 @@ const App = () => {
         }))
     }
 
-    const diceElements = dice.map(die => (
-      <Die 
-          key={die.id} 
-          value={die.value} 
-          isHeld={die.isHeld} 
-          holdDice={() => holdDice(die.id)}
-      />
-    ))
-
-    
     return (
       <div className="webpage-container">
         <main>
@@ -69,7 +60,16 @@ const App = () => {
             <p className="instructions">Roll until all dice are the same. 
             Click each die to freeze it at its current value between rolls.</p>
             <div className="dice-container">
-              {diceElements}
+              {
+                dice.map(die => (
+                  <Die 
+                      key={die.id} 
+                      value={die.value} 
+                      isHeld={die.isHeld} 
+                      holdDice={() => holdDice(die.id)}
+                  />
+                ))
+              }
             </div>
             <button 
                 className="roll-dice" 
@@ -77,6 +77,7 @@ const App = () => {
                     if (tenzies) {
                         setTenzies(prevTenzies => false)
                         setDice(prevDice => allNewDice())
+                        setTimesRolled(prevTimesRolled => 0)
                     } else {
                         rollDice()
                     }
@@ -85,6 +86,7 @@ const App = () => {
             >
                 {tenzies ? "New Game" : "Roll"}
             </button>
+            <p>You've rolled {timesRolled} times!</p>
         </main>
       </div>
     )
