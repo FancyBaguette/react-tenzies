@@ -21,7 +21,7 @@ const Game = () => {
 
     const [dice, setDice] = useState(allNewDice())
     const [timesRolled, setTimesRolled] = useState(0)
-    const [tenzies, setTenzies] = useState(true)
+    const [tenzies, setTenzies] = useState(false)
     const viewportSize = useViewportSize()
     
     useEffect(() => {
