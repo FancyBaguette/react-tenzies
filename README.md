@@ -7,7 +7,7 @@ That being said, i've decided to add some additional features to the app as the 
 *If the the box isn't checked, the feature hasn't been implemented yet*
 
 - [x] Actual dots on the dice
-- [ ] Track the number of rolls
+- [x] Track the number of rolls
 - [ ] Track the time it took to win
 - [ ] Saving best time to local storage
 
