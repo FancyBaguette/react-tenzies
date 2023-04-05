@@ -1,0 +1,42 @@
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.homepage-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-boxes {
+    display: flex;
+    gap: 40px;
+}
+
+.info-box {
+    padding: 10px;
+    max-width: 260px;
+    min-height: 180px;
+    background-color: white;
+}
+
+.info-box-title {
+    font-size: 1.1875rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.play-btn {
+    width: 100%;
+    background-color: #0066FF;
+    border: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.play-btn:hover {
+    box-shadow: inset 0px 0px 10px #052556;
+}

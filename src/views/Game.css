@@ -1,0 +1,42 @@
+.game-wrapper {
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dice-container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 1.25rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.roll-btn {
+    min-height: 50px;
+    min-width: 150px;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background-color: #0066FF;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.roll-dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.game-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.game-bar > * {
+    flex-grow: 1;
+}

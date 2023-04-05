@@ -1,3 +1,5 @@
+import './Die.css'
+
 const Die = (props) => {
     return (
         <div 
