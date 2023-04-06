@@ -6,7 +6,7 @@ const ResultsModal = (props) => {
         <div className="modal-background">
             <div className="modal-body">
                 <p className="modal-title">Game finished! 🎉</p>
-                <p>You've finished the game in {props.time} <em>(time will go here)</em></p>
+                <p>You've finished the game in {props.secondsPassed} seconds</p>
                 <p>During the game you've rolled the dice <strong>{props.timesRolled}</strong> times</p>
                 <Link to={"/"}>
                     <button className="modal-btn">

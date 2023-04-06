@@ -21,8 +21,23 @@ const Game = () => {
 
     const [dice, setDice] = useState(allNewDice())
     const [timesRolled, setTimesRolled] = useState(0)
+    const [secondsPassed, setSecondsPassed] = useState(0)
     const [tenzies, setTenzies] = useState(false)
     const viewportSize = useViewportSize()
+
+    useEffect(() => {
+      
+        const timer = setInterval(() => {
+          setSecondsPassed(prevSecondsPassed => prevSecondsPassed + 1)
+        },1000)
+
+        if (tenzies) {
+          clearInterval(timer)
+        }
+
+        return () => clearInterval(timer)
+
+    },[tenzies])
     
     useEffect(() => {
       if (dice.every(die => dice[0].value === die.value && die.isHeld)) {
@@ -58,7 +73,9 @@ const Game = () => {
 
     return (
       <main className="game-wrapper">
+
           {tenzies && <Confetti width={viewportSize.width} height={viewportSize.height}/>}
+
           <div className="dice-container">
             { dice &&
               dice.map(die => (
@@ -71,6 +88,7 @@ const Game = () => {
               ))
             }
           </div>
+
           <div className="game-bar">
             <button 
                 className="roll-btn" 
@@ -86,10 +104,16 @@ const Game = () => {
             >
                 ROLL
             </button>
+            {secondsPassed}
           </div>
+
           {
-            tenzies && <Portal><ResultsModal timesRolled={timesRolled}/></Portal>
+            tenzies && 
+            <Portal>
+              <ResultsModal timesRolled={timesRolled} secondsPassed={secondsPassed}/>
+            </Portal>
           }
+
         </main>
     )
 }

@@ -8,7 +8,7 @@ That being said, i've decided to add some additional features to the app as the 
 
 - [x] Actual dots on the dice
 - [x] Track the number of rolls
-- [ ] Track the time it took to win
+- [x] Track the time it took to win
 - [ ] Saving best time to local storage
 
 ### 📝 Notes
