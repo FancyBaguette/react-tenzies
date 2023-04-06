@@ -15,16 +15,28 @@
 }
 
 .info-box {
-    padding: 10px;
-    max-width: 260px;
+    padding: 20px;
+    max-width: 270px;
     min-height: 180px;
     background-color: white;
+    border-radius: 16px;
 }
 
 .info-box-title {
     font-size: 1.1875rem;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+.leaderboard-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 200px;
+}
+
+.leaderboard-box p:first-of-type {
+    font-size: 2rem;
 }
 
 .play-btn {

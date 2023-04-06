@@ -1,7 +1,8 @@
 import "./MainMenu.css"
 import { Link } from "react-router-dom"
 
-const MainMenu = () => {
+const MainMenu = (props) => {
+
     return (
         <div className="homepage-wrapper">
 
@@ -15,10 +16,12 @@ const MainMenu = () => {
                     Click each die to freeze it at its current value between rolls.
                 </p>
                 </div>
-                <div className="info-box">
-                    <p className="info-box-title">🏆 Personal leaderboard</p>
-                    <p>Lorem, ipsum dolor.</p>
-                </div>
+                <Link to={"/leaderboard"}>
+                    <div className="info-box leaderboard-box">
+                            <p>🏆</p>
+                            <p>Personal <br/> Leaderboard</p>
+                    </div>
+                </Link>
             </main>
 
             <Link className="btn-link" to={"/game"}>

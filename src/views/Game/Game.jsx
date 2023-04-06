@@ -1,13 +1,18 @@
 import {useState, useEffect} from "react"
-import useViewportSize from "../../hooks/useViewportSize"
+import { Portal } from "react-portal"
 import {nanoid} from "nanoid"
+import * as dayjs from "dayjs"
+import duration from "dayjs/plugin/duration"
 import Die from "../../components/Die/Die"
 import Confetti from "react-confetti"
 import ResultsModal from "../../components/ResultsModal/ResultsModal"
-import { Portal } from "react-portal"
+import useViewportSize from "../../hooks/useViewportSize"
+
 import "./Game.css"
 
-const Game = () => {
+const Game = (props) => {
+
+    dayjs.extend(duration)
 
     const allNewDice = () => {
       return Array.from({length: 10}, () => {
@@ -42,7 +47,13 @@ const Game = () => {
     useEffect(() => {
       if (dice.every(die => dice[0].value === die.value && die.isHeld)) {
         setTenzies(prevTenzies => true)
-        console.log('You won')
+        props.setPersonalLeaderboard(prevPersonalLeaderboard => [{
+          date: dayjs().format('DD-MM-YYYY HH:mm'),
+          time: secondsPassed,
+          formattedTime: dayjs.duration(secondsPassed, 'seconds').format('HH:mm:ss'),
+          rolls: timesRolled,
+          id: nanoid()
+        }, ...prevPersonalLeaderboard])
       }
     }, [dice])
 
