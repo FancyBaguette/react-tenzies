@@ -9,7 +9,7 @@ That being said, i've decided to add some additional features to the app as the 
 - [x] Actual dots on the dice
 - [x] Track the number of rolls
 - [x] Track the time it took to win
-- [ ] Saving best time to local storage
+- [x] Saving best time to local storage
 
 ### 📝 Notes
 With this project i've decided to give it a go and write sort of a documentation to make sure i've fully understood the code i've written. This will be more of a line-by-line explanation rather than fully fledged documentation, documenting each component.
