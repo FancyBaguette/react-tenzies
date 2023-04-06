@@ -1,10 +1,6 @@
 import "./PersonalLeaderboard.css"
-import * as dayjs from "dayjs"
-import duration from "dayjs/plugin/duration"
 
 const PersonalLeaderboard = (props) => {
-
-    dayjs.extend(duration)
 
     console.log(props.personalLeaderboard)
 
