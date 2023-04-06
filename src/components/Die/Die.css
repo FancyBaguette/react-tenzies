@@ -15,27 +15,27 @@
 }
 
 .die-face[data-number="1"] {
-    background-image: url('../assets/images/dice-1.svg');
+    background-image: url('../../assets/images/dice-1.svg');
 }
 
 .die-face[data-number="2"] {
-    background-image: url('../assets/images/dice-2.svg');
+    background-image: url('../../assets/images/dice-2.svg');
 }
 
 .die-face[data-number="3"] {
-    background-image: url('../assets/images/dice-3.svg');
+    background-image: url('../../assets/images/dice-3.svg');
 }
 
 .die-face[data-number="4"] {
-    background-image: url('../assets/images/dice-4.svg');
+    background-image: url('../../assets/images/dice-4.svg');
 }
 
 .die-face[data-number="5"] {
-    background-image: url('../assets/images/dice-5.svg');
+    background-image: url('../../assets/images/dice-5.svg');
 }
 
 .die-face[data-number="6"] {
-    background-image: url('../assets/images/dice-6.svg');
+    background-image: url('../../assets/images/dice-6.svg');
 }
 
 .die-num {

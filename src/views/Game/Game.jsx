@@ -1,9 +1,9 @@
 import {useState, useEffect} from "react"
-import useViewportSize from "../hooks/useViewportSize"
+import useViewportSize from "../../hooks/useViewportSize"
 import {nanoid} from "nanoid"
-import Die from "../components/Die"
+import Die from "../../components/Die/Die"
 import Confetti from "react-confetti"
-import ResultsModal from "../components/ResultsModal"
+import ResultsModal from "../../components/ResultsModal/ResultsModal"
 import { Portal } from "react-portal"
 import "./Game.css"
 

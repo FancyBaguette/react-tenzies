@@ -1,6 +1,6 @@
 import "./App.css"
-import MainMenu from "./views/MainMenu"
-import Game from "./views/Game"
+import MainMenu from "./views/MainMenu/MainMenu"
+import Game from "./views/Game/Game"
 import { Routes, Route } from "react-router-dom"
 
 const App = () => {
