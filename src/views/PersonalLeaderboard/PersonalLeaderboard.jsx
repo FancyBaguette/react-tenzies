@@ -2,8 +2,6 @@ import "./PersonalLeaderboard.css"
 
 const PersonalLeaderboard = (props) => {
 
-    console.log(props.personalLeaderboard)
-
     // https://stackoverflow.com/questions/36608611/why-does-math-min1-2-return-nan
     const bestTime = Math.min(...props.personalLeaderboard.map(record => record.time))
     const bestTimeObj = props.personalLeaderboard.find(record => record.time === bestTime)
@@ -16,22 +14,24 @@ const PersonalLeaderboard = (props) => {
                 <>
                     <p className="personal-best">Personal best: {bestTimeObj.rolls} rolls in {bestTimeObj.formattedTime}</p>
                     <table>
-                        <tr>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Rolls</th>
-                        </tr>
-                            {
-                                props.personalLeaderboard.map(record => {
-                                    return (
-                                        <tr className={`${record.id === bestTimeObj.id ? 'best-time' : ''}`} key={record.id}>
-                                            <td>{record.date}</td>
-                                            <td>{record.formattedTime}</td>
-                                            <td>{record.rolls}</td>
-                                        </tr>
-                                    )
-                                })
-                            }
+                        <tbody>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Rolls</th>
+                            </tr>
+                                {
+                                    props.personalLeaderboard.map(record => {
+                                        return (
+                                            <tr className={`${record.id === bestTimeObj.id ? 'best-time' : ''}`} key={record.id}>
+                                                <td>{record.date}</td>
+                                                <td>{record.formattedTime}</td>
+                                                <td>{record.rolls}</td>
+                                            </tr>
+                                        )
+                                    })
+                                }
+                        </tbody>
                     </table>
                 </>
             }

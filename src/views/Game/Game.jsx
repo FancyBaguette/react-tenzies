@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react"
 import { Portal } from "react-portal"
 import {nanoid} from "nanoid"
-import * as dayjs from "dayjs"
+import dayjs from "dayjs"
 import duration from "dayjs/plugin/duration"
 import Die from "../../components/Die/Die"
 import Confetti from "react-confetti"
