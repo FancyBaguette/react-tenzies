@@ -17,7 +17,7 @@ const Game = (props) => {
     const allNewDice = () => {
       return Array.from({length: 10}, () => {
         return {
-            value: Math.floor(Math.random()*6)+1,
+            value: Math.ceil(Math.random() * 6),
             isHeld: false,
             id: nanoid()
         }
@@ -103,15 +103,7 @@ const Game = (props) => {
           <div className="game-bar">
             <button 
                 className="roll-btn" 
-                onClick={() => {
-                    if (tenzies) {
-                        setTenzies(prevTenzies => false)
-                        setDice(prevDice => allNewDice())
-                    } else {
-                        rollDice()
-                    }
-                }}
-                
+                onClick={() => {tenzies ? setTenzies(prevTenzies => false) : rollDice()}}   
             >
                 ROLL
             </button>
