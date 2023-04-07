@@ -1,7 +1,7 @@
 @import url('https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css');
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #F5F5F5;
   background-image: url('./assets/images/blob-scene-haikei.svg');
   background-size: cover;
